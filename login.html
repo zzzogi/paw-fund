@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from www.shmai.com/preview/pawrex-html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Nov 2024 06:53:31 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>PawFund | Login</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!--Color Switcher Mockup-->
+    <link href="css/color-switcher-design.css" rel="stylesheet" />
+    <!--Color Themes-->
+    <link
+      id="theme-color-file"
+      href="css/color-themes/default-theme.css"
+      rel="stylesheet"
+    />
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+      <div class="preloader"></div>
+      <!-- Main Header-->
+      <header class="main-header">
+        <!-- =========================================== MENU NGANG ========================================================= -->
+        <!-- Header Upper -->
+        <div class="header-upper">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo Section -->
+            <div class="logo-outer">
+              <a href="index.html">
+                <img
+                  src="images/Paw.png"
+                  alt="Logo"
+                  class="logo"
+                  style="width: 100px; height: auto"
+                />
+              </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="main-menu">
+              <button
+                class="navbar-toggle d-lg-none"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+              >
+                <span><i class="fa fa-bars"></i></span>
+              </button>
+              <div id="navbarMenu" class="navbar-collapse collapse">
+                <ul class="navigation d-flex align-items-center">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="shelter.html" class="nav-link">Shelter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pets.html" class="nav-link">Pets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <ion-icon name="contact" size="large"></ion-icon>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="login.html" class="dropdown-item">Login</a>
+                      </li>
+                      <li>
+                        <a href="register.html" class="dropdown-item"
+                          >Register</a
+                        >
+                      </li>
+                      <li>
+                        <a href="user_profile.html" class="dropdown-item"
+                          >My Profile</a
+                        >
+                      </li>
+                      <li id="management" style="display: none">
+                        <a href="#" class="dropdown-item">Dashboard</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- =========================================== MENU NGANG ========================================================= -->
+      <!--End Main Header -->
+      <!--Page Title-->
+      <section
+        class="page-title"
+        style="background-image: url(images/background/7.jpg)"
+      >
+        <div class="auto-container">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h1>Login</h1>
+            </div>
+            <div class="pull-right">
+              <ul class="page-breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>login</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End Page Title-->
+      <div class="sidebar-page-container">
+        <div class="auto-container">
+          <div class="clearfix">
+            <div id="login" class="ptb ptb-xs-40 page-signin">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="main-body">
+                      <div class="body-inner">
+                        <div class="card bg-white">
+                          <div class="card-content">
+                            <section class="logo text-center">
+                              <!--Sec Title-->
+                              <div class="sec-title centered">
+                                <div class="separator">
+                                  <span class="icon flaticon-pawprint-1"></span>
+                                </div>
+                                <div class="title">
+                                  Because We Really Care About Your Pets
+                                </div>
+                                <h2>Login</h2>
+                              </div>
+                            </section>
+                            <!-- <form class="form-horizontal ng-pristine ng-valid">
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Email</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Password</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form> -->
+                            <form class="form-horizontal ng-pristine ng-valid">
+                              <fieldset>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="text"
+                                      id="email"
+                                      class="form-control"
+                                      placeholder=" "
+                                      required
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label>Email</label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="password"
+                                      id="password"
+                                      class="form-control"
+                                      placeholder=" "
+                                      required
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label>Password</label>
+                                  </div>
+                                </div>
+                                <div
+                                  class="form-group"
+                                  style="
+                                    display: block;
+                                    justify-content: center;
+                                  "
+                                >
+                                  <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    onclick="handleLogin()"
+                                  >
+                                    Login
+                                  </button>
+                                </div>
+                              </fieldset>
+                            </form>
+                          </div>
+                          <!-- <div class="card-action no-border text-end"> <a href="#/" class="color-primary">Sign in</a> </div> -->
+                        </div>
+                        <div class="additional-info">
+                          <a href="register.html">Register</a
+                          ><span class="divider-h"></span
+                          ><a href="#/page/forgot-password"
+                            >Forgot your password?</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Main Footer-->
+      <footer class="main-footer">
+        <div class="auto-container">
+          <!--Widgets Section-->
+          <div class="widgets-section">
+            <div class="row clearfix">
+              <!--big column-->
+              <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                    <div class="footer-widget logo-widget">
+                      <div class="logo">
+                        <a href="index.html">
+                          <img
+                            src="images/Paw.png"
+                            width="50%"
+                            alt=""
+                            title=""
+                          />
+                        </a>
+                      </div>
+                      <div class="text">
+                        This prodigiously grew tortoise charact stupidly
+                        pernicious jeepers along while accordingly under useful
+                        much salacious walking fars before some supp
+                        aesthetically wow shuddered.
+                      </div>
+                      <ul class="social-icon-two">
+                        <li>
+                          <a href="#"><span class="fa fa-twitter"></span></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-facebook-square"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-google-plus"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-youtube-play"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-pinterest-p"></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                    <div class="footer-widget links-widget">
+                      <h2>Web Links</h2>
+                      <ul class="links">
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="blog.html">Our News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--big column-->
+              <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-widget info-widget">
+                      <h2>Get In Touch</h2>
+                      <ul>
+                        <li>
+                          <span class="icon fa fa-map-marker"></span>32
+                          BellSouth, Harley Street <br />
+                          Florida 33968
+                        </li>
+                        <li>
+                          <span class="icon fa fa-phone"></span>
+                          <a href="tel:+12345678900">+(1) 234 567 8900 </a>
+                        </li>
+                        <li>
+                          <span class="icon fa fa-envelope"></span>
+                          <a href="mailto:support@PawFund.com">
+                            support@PawFund.com
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-widget subscribe-widget">
+                      <h2>Subsrribe to RSS</h2>
+                      <div class="text">
+                        One jeepers along while do accord under useful much
+                        darn.
+                      </div>
+                      <div class="subscribe-form">
+                        <form
+                          method="post"
+                          action="https://www.shmai.com/preview/PawFund-html/contact.html"
+                        >
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              name="email"
+                              value=""
+                              placeholder="Email"
+                              required=""
+                            />
+                          </div>
+                          <div class="form-group">
+                            <button
+                              type="submit"
+                              class="theme-btn btn-style-four"
+                            >
+                              subscribe now
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="copyright">
+              Copyrights 2021 <span>PawFund</span> • All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--End Main Footer-->
+    </div>
+    <!--End pagewrapper-->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-bs-target="html">
+      <span class="icon flaticon-pawprint-1"></span>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/color-settings.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- -----------------API cũ ---------------------- -->
+    <!-- <script>
+        function handleLogin() {
+            // Get form inputs using unique IDs
+            const email = document.querySelector('#email').value.trim();
+            const password = document.querySelector('#password').value.trim();
+    
+            // Validate inputs
+            if (!email || !password) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Validation Error',
+                    text: 'Please fill in both Email and Password fields.',
+                });
+                return;
+            }
+    
+            // API endpoint
+            const url = `https://localhost:7063/api/Auth/Login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+    
+            // AJAX request
+            $.ajax({
+                url: url,
+                method: "GET",
+                success: function (response) {
+                    if (response.success) {
+                        // Save user data and token in session storage
+                        sessionStorage.setItem("userId", response.data.userId);
+                        sessionStorage.setItem("role", response.data.role);
+                        sessionStorage.setItem("token", response.successMessage);
+    
+                        // Success notification
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Login Successful',
+                            text: 'Redirecting to Home...',
+                            timer: 2000,
+                            showConfirmButton: false,
+                        }).then(() => {
+                            if(  response.data.role === 'Admin'){
+                                window.location.href = 'dashboard.html';
+                            }else {
+                                window.location.href = 'index.html';
+                            }
+                            
+                        });
+                    } else {
+                        // Error notification
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Login Failed',
+                            text: response.errorMessage || 'Invalid credentials.',
+                        });
+                    }
+                },
+                error: function (error) {
+                    // Handle server errors
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'An error occurred during login. Please try again later.',
+                    });
+                }
+            });
+        }
+    </script>   -->
+
+    <!-- ---------------------------------API MỚI ----------------------------------- -->
+
+    <script>
+      function parseJWT(token) {
+        const base64Url = token.split(".")[1]; // Lấy payload (phần thứ hai của JWT)
+        const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        const jsonPayload = decodeURIComponent(
+          atob(base64)
+            .split("")
+            .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+            .join("")
+        );
+        return JSON.parse(jsonPayload); // Trả về payload dưới dạng object
+      }
+
+      function handleLogin() {
+        // Lấy giá trị email và password từ form
+        const email = document.querySelector("#email").value.trim();
+        const password = document.querySelector("#password").value.trim();
+
+        // Kiểm tra dữ liệu đầu vào
+        if (!email || !password) {
+          Swal.fire({
+            icon: "warning",
+            title: "Validation Error",
+            text: "Please fill in both Email and Password fields.",
+          });
+          return;
+        }
+
+        // Cấu trúc dữ liệu gửi lên API
+        const loginData = {
+          email: email,
+          password: password,
+        };
+
+        // Gửi request POST đến API login
+        $.ajax({
+          url: "https://localhost:7247/api/User/login",
+          method: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(loginData), // Dữ liệu login gửi trong request body
+          success: function (response) {
+            try {
+              // Phân tích token JWT để lấy thông tin role
+              const decodedToken = parseJWT(response);
+              const userRole = decodedToken.role;
+
+              // Lưu token vào sessionStorage
+              sessionStorage.setItem("token", response);
+
+              // Redirect dựa trên role
+              Swal.fire({
+                icon: "success",
+                title: "Login Successful",
+                text: "Redirecting...",
+                timer: 2000,
+                showConfirmButton: false,
+              }).then(() => {
+                if (userRole === "Admin") {
+                  window.location.href = "dashboard.html";
+                } else {
+                  window.location.href = "index.html";
+                }
+              });
+            } catch (error) {
+              // Thông báo lỗi nếu JWT không hợp lệ
+              Swal.fire({
+                icon: "error",
+                title: "Login Failed",
+                text: "Invalid token received.",
+              });
+            }
+          },
+          error: function (error) {
+            // Thông báo lỗi từ server
+            Swal.fire({
+              icon: "error",
+              title: "Login Failed",
+              text: error.responseJSON?.message || "Invalid credentials.",
+            });
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

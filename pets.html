@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pawrex Template | Buy Pets</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/color-switcher-design.css" rel="stylesheet" />
+    <link
+      id="theme-color-file"
+      href="css/color-themes/default-theme.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Revolution Slider Styles -->
+    <link
+      href="plugins/revolution/css/settings.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="plugins/revolution/css/layers.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="plugins/revolution/css/navigation.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Responsive Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <link href="assets/css/inner.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main-wrapper pet buy">
+      <div id="preloading"></div>
+
+      <section class="featured">
+        <header class="main-header">
+          <!-- =========================================== MENU NGANG ========================================================= -->
+          <!-- Header Upper -->
+          <div class="header-upper">
+            <div
+              class="container d-flex align-items-center justify-content-between"
+            >
+              <!-- Logo Section -->
+              <div class="logo-outer">
+                <a href="index.html">
+                  <img
+                    src="images/Paw.png"
+                    alt="Logo"
+                    class="logo"
+                    style="width: 100px; height: auto"
+                  />
+                </a>
+              </div>
+
+              <!-- Navigation Menu -->
+              <nav class="main-menu">
+                <button
+                  class="navbar-toggle d-lg-none"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarMenu"
+                >
+                  <span><i class="fa fa-bars"></i></span>
+                </button>
+                <div id="navbarMenu" class="navbar-collapse collapse">
+                  <ul class="navigation d-flex align-items-center">
+                    <li class="nav-item">
+                      <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="shelter.html" class="nav-link">Shelter</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="pets.html" class="nav-link">Pets</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <ion-icon name="contact" size="large"></ion-icon>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="login.html" class="dropdown-item">Login</a>
+                        </li>
+                        <li>
+                          <a href="register.html" class="dropdown-item"
+                            >Register</a
+                          >
+                        </li>
+                        <li>
+                          <a href="user_profile.html" class="dropdown-item"
+                            >My Profile</a
+                          >
+                        </li>
+                        <li id="management" style="display: none">
+                          <a href="#" class="dropdown-item">Dashboard</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <!-- =========================================== MENU NGANG ========================================================= -->
+        <div class="crumb">
+          <div class="container">
+            <h1>
+              Adopt <span class="wow pulse" data-wow-delay="1s"> Pet </span>
+            </h1>
+            <div class="bg_tran">Adopt Pet</div>
+            <p>
+              <a href="index-5.html" title="Home">HOME</a>
+              || <span> PETS </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pet about second">
+        <section class="team">
+          <div class="container">
+            <div class="heading text-center">
+              <p class="wow fadeInUp">
+                <span class="purple"><i class="fas fa-paw"></i> </span>
+                <span class="orange"><i class="fas fa-paw"></i> </span>
+                <span class="purple"><i class="fas fa-paw"></i> </span>
+              </p>
+              <h2 class="wow fadeInDown">
+                Ready to Adopt
+                <span class="wow pulse" data-wow-delay="1s">Pets</span>
+              </h2>
+            </div>
+            <div class="container my-5">
+              <div id="petContainer" class="row"></div>
+              <div class="row">
+                <div class="col-12 mt-3">
+                  <nav aria-label="Page navigation example">
+                    <ul
+                      class="pagination justify-content-center"
+                      id="pagination"
+                    >
+                      <!-- Pagination items will be appended dynamically -->
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="new_foot">
+        <div class="container">
+          <div class="logo text-center">
+            <a href="index.html" title="Logo">
+              <img
+                src="images/Paw.png"
+                alt="image of logo"
+                title="logo"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="intro">
+                <p class="head">Contact Info</p>
+                <ul>
+                  <li class="location">32 Bell South, Harley St. FL</li>
+                  <li class="number">
+                    <a href="tel:+12345678900">+(1) 234 567 8900 </a>
+                  </li>
+                  <li class="gmail">
+                    <a href="mailto:support@pawrex.com">
+                      support@pawfund.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-12">
+              <div class="letter text-center">
+                <p class="head">Get Newsletter</p>
+                <form
+                  method="post"
+                  action="https://www.shmai.com/preview/pawrex-html/contact.html"
+                >
+                  <div class="form-label-group">
+                    <input
+                      type="email"
+                      name="email2"
+                      id="email2"
+                      placeholder="EMAIL"
+                      class="form-control white b_lblue"
+                    />
+                    <button type="submit" class="btn form-control">
+                      SUBSCRIBE
+                    </button>
+                  </div>
+                </form>
+                <div class="links">
+                  <a href="#" class="btn" title="whatsapp"
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                  <a href="#" class="btn" title="twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="btn" title="instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" class="btn" title="youtube"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="quick">
+                <p class="head">Quick Links</p>
+                <ul>
+                  <li>
+                    <a href="#" title="Home"><i class="fas fa-paw"></i>Home</a>
+                  </li>
+                  <li>
+                    <a href="#" title="About"
+                      ><i class="fas fa-paw"></i>About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" title="Services"
+                      ><i class="fas fa-paw"></i>Our Services</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            &copy; Copyright 2024.<a
+              href="#"
+              class="name orange"
+              title="PAWREX"
+            >
+              PawFund
+            </a>
+            All Rights Reserved &reg;
+          </div>
+          <div class="cat wow fadeIn">
+            <img
+              src="images/home_5/img-1.png"
+              alt="image of pets"
+              title="pets"
+            />
+          </div>
+          <div class="dog wow fadeIn">
+            <img
+              src="images/home_5/img-2.png"
+              alt="image of pets"
+              title="pets"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="pet">
+        <a id="back2Top" title="Back to top" href="#" class="hvr-radial-in"
+          ><i class="fas fa-paw"></i
+        ></a>
+      </div>
+
+      <div class="search-popup">
+        <button class="close-search style-two">
+          <img src="images/home_5/cross-out.png" alt="" />
+        </button>
+        <button class="close-search">
+          <img src="images/home_5/cross-out.png" alt="" />
+        </button>
+        <form
+          method="post"
+          action="https://www.shmai.com/preview/pawrex-html/blog.html"
+        >
+          <div class="form-group">
+            <input
+              type="search"
+              name="search-field"
+              value=""
+              placeholder="Search Here"
+              required
+            />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousewheel.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/color-settings.js"></script>
+
+    <!-- Pet Data Fetching Script -->
+    <script>
+      // Function to format gender from boolean to string
+      function formatGender(gender) {
+        return gender ? "Male" : "Female";
+      }
+
+      // Các biến toàn cục để lưu trữ dữ liệu và trang hiện tại
+      let allPets = [];
+      let currentPage = 1;
+      const pageSize = 9; // Số lượng thú cưng mỗi trang
+
+      // Function to fetch pet data from API
+      function fetchPetData() {
+        $.ajax({
+          url: "https://localhost:7247/api/Pet/GetAllPet", // Cập nhật URL API thực tế
+          method: "GET",
+          success: function (response) {
+            // Kiểm tra xem dữ liệu có hợp lệ không
+            if (Array.isArray(response) && response.length > 0) {
+              allPets = response; // Lưu dữ liệu vào mảng allPets
+              displayPets(currentPage); // Hiển thị các thú cưng cho trang hiện tại
+              updatePagination(); // Cập nhật phân trang
+            } else {
+              $("#petContainer").html(
+                "<p>No pets available for adoption at the moment. Please check back later.</p>"
+              );
+            }
+          },
+          error: function () {
+            $("#petContainer").html(
+              "<p>There was an error fetching pet data. Please try again later.</p>"
+            );
+          },
+        });
+      }
+
+      // Function to display pets for the current page
+      function displayPets(page) {
+        let start = (page - 1) * pageSize;
+        let end = start + pageSize;
+        let petsToDisplay = allPets.slice(start, end); // Lấy dữ liệu cho trang hiện tại
+
+        let petCards = "";
+        petsToDisplay.forEach((pet) => {
+          petCards += `
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="member">
+                            <div class="image">
+                                <img src="images/home_5/pet-1.png" alt="image of pet" title="pet" class="img-fluid customer">
+                            </div>
+                            <div class="content">
+                                <h4 class="wow fadeInDown">${pet.name}</h4>
+                                <ul>
+                                    <li><i class="fas fa-paw"></i> Species: ${
+                                      pet.species
+                                    }</li>
+                                    <li><i class="fas fa-paw"></i> Gender: ${formatGender(
+                                      pet.gender
+                                    )}</li>
+                                    <li><i class="fas fa-paw"></i> Age: ${
+                                      pet.ages
+                                    }</li>
+                                    <li><i class="fas fa-paw"></i> Breed: ${
+                                      pet.breed
+                                    }</li>
+                                </ul>
+                                <div class="button wow fadeInUp">
+                                    <a href="pet_details.html?petId=${
+                                      pet.petId
+                                    }" style="color: black;" class="btn main" title="contact">
+                                        Adopt me <i class="fas fa-paw"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+        });
+
+        $("#petContainer").html(petCards); // Thêm các thẻ thú cưng vào container
+      }
+
+      // Function to update pagination controls
+      function updatePagination() {
+        let totalPages = Math.ceil(allPets.length / pageSize); // Tính số trang
+        let paginationHtml = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+          paginationHtml += `
+                    <li class="page-item ${i === currentPage ? "active" : ""}">
+                        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+                    </li>`;
+        }
+
+        $("#pagination").html(paginationHtml); // Cập nhật phân trang
+      }
+
+      // Function to handle page change
+      function changePage(page) {
+        currentPage = page;
+        displayPets(currentPage); // Hiển thị thú cưng cho trang đã chọn
+        updatePagination(); // Cập nhật phân trang
+      }
+
+      // Function to handle "Adopt Me" button click
+      function handleAdoptButtonClick(petId) {
+        window.location.href = `/pet_details.html?petId=${petId}`; // Điều hướng đến trang chi tiết thú cưng
+      }
+
+      // Gọi hàm fetchPetData khi trang tải xong
+      $(document).ready(function () {
+        fetchPetData(); // Lấy dữ liệu thú cưng và hiển thị
+
+        // Gắn sự kiện click cho tất cả các nút "Adopt Me"
+        $(document).on("click", ".adopt-btn", function () {
+          let petId = $(this).data("pet-id");
+          handleAdoptButtonClick(petId);
+        });
+      });
+    </script>
+  </body>
+</html>

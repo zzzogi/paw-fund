@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from www.shmai.com/preview/PawFund-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Nov 2024 06:53:31 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>PawFund | Register</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!--Color Switcher Mockup-->
+    <link href="css/color-switcher-design.css" rel="stylesheet" />
+    <!--Color Themes-->
+    <link
+      id="theme-color-file"
+      href="css/color-themes/default-theme.css"
+      rel="stylesheet"
+    />
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/color-settings.js"></script>
+    <!--Google Map APi Key-->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBKS14AnP3HCIVlUpPKtGp7CbYuMtcXE2o"></script>
+    <script src="js/map-script.js"></script>
+    <!--End Google Map APi-->
+
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+      <div class="preloader"></div>
+      <!-- Main Header-->
+      <header class="main-header">
+        <!-- =========================================== MENU NGANG ========================================================= -->
+        <!-- Header Upper -->
+        <div class="header-upper">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo Section -->
+            <div class="logo-outer">
+              <a href="index.html">
+                <img
+                  src="images/Paw.png"
+                  alt="Logo"
+                  class="logo"
+                  style="width: 100px; height: auto"
+                />
+              </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="main-menu">
+              <button
+                class="navbar-toggle d-lg-none"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+              >
+                <span><i class="fa fa-bars"></i></span>
+              </button>
+              <div id="navbarMenu" class="navbar-collapse collapse">
+                <ul class="navigation d-flex align-items-center">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="shelter.html" class="nav-link">Shelter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pets.html" class="nav-link">Pets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <ion-icon name="contact" size="large"></ion-icon>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="login.html" class="dropdown-item">Login</a>
+                      </li>
+                      <li>
+                        <a href="register.html" class="dropdown-item"
+                          >Register</a
+                        >
+                      </li>
+                      <li>
+                        <a href="user_profile.html" class="dropdown-item"
+                          >My Profile</a
+                        >
+                      </li>
+                      <li id="management" style="display: none">
+                        <a href="#" class="dropdown-item">Dashboard</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- =========================================== MENU NGANG ========================================================= -->
+      <!--End Main Header -->
+      <!--Page Title-->
+      <section
+        class="page-title"
+        style="background-image: url(images/background/7.jpg)"
+      >
+        <div class="auto-container">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h1>Register</h1>
+            </div>
+            <div class="pull-right">
+              <ul class="page-breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>register</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End Page Title-->
+      <div class="sidebar-page-container">
+        <div class="auto-container">
+          <div class="clearfix">
+            <div id="login" class="ptb ptb-xs-40 page-signin">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="main-body">
+                      <div class="body-inner">
+                        <div class="card bg-white">
+                          <div class="card-content">
+                            <section class="logo text-center">
+                              <!--Sec Title-->
+                              <div class="sec-title centered">
+                                <div class="separator">
+                                  <span class="icon flaticon-pawprint-1"></span>
+                                </div>
+                                <div class="title">
+                                  Because We Really Care About Your Pets
+                                </div>
+                                <h2>Register</h2>
+                              </div>
+                            </section>
+                            <!-- REGISTER -->
+                            <!-- <form class="form-horizontal ng-pristine ng-valid">
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Your email</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Your password </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Please confirm your password </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <input type="text" required="" class="form-control">
+                                                                    <span class="input-bar"></span>
+                                                                    <label>Full Name</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="ui-input-group">
+                                                                    <select class="form-select mb-3" aria-label=".form-select-lg example"> 
+                                                                        <option value="Member">Member</option>
+                                                                        <option value="Adopters" >Adopters</option>
+                                                                        <option value="Volunteers">Volunteers</option>
+                                                                        <option value="Donors">Donors</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                             
+                                                            <div class="spacer"></div>
+                                                            <div class="form-group checkbox-field">
+                                                                  </div>
+                                                        </fieldset>
+                                                    </form> -->
+
+                            <!-- Registration Form -->
+                            <form id="registerForm" class="form-horizontal">
+                              <fieldset>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="email"
+                                      id="email"
+                                      required
+                                      class="form-control"
+                                      placeholder="Email"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="password"
+                                      id="password"
+                                      required
+                                      class="form-control"
+                                      placeholder="Your password"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="password"
+                                      id="confirmPassword"
+                                      required
+                                      class="form-control"
+                                      placeholder="Please confirm your password"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="text"
+                                      id="fullName"
+                                      required
+                                      class="form-control"
+                                      placeholder="Full Name"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="text"
+                                      id="phoneNumber"
+                                      required
+                                      class="form-control"
+                                      placeholder="Phone Number"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="ui-input-group">
+                                    <input
+                                      type="text"
+                                      id="address"
+                                      required
+                                      class="form-control"
+                                      placeholder="Address"
+                                    />
+                                    <span class="input-bar"></span>
+                                    <label></label>
+                                  </div>
+                                </div>
+                                <div class="form-group" style="display: none">
+                                  <div class="ui-input-group">
+                                    <select
+                                      id="role"
+                                      class="form-select mb-3"
+                                      required
+                                    >
+                                      <option value="Member">
+                                        Choose role
+                                      </option>
+                                      <option value="Adopters">Adopters</option>
+                                      <option value="Volunteers">
+                                        Volunteers
+                                      </option>
+                                      <option value="Donors">Donors</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <button
+                                  type="button"
+                                  id="registerBtn"
+                                  class="btn btn-primary"
+                                >
+                                  Register
+                                </button>
+                              </fieldset>
+                            </form>
+
+                            <!-- Response Message -->
+                            <div id="responseMessage" class="mt-3"></div>
+
+                            <!-- REGISTER END -->
+                          </div>
+                          <div class="card-action no-border text-end">
+                            <a href="login.html">Login</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Main Footer-->
+      <footer class="main-footer">
+        <div class="auto-container">
+          <!--Widgets Section-->
+          <div class="widgets-section">
+            <div class="row clearfix">
+              <!--big column-->
+              <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                    <div class="footer-widget logo-widget">
+                      <div class="logo">
+                        <a href="index.html">
+                          <img
+                            src="images/Paw.png"
+                            width="50%"
+                            alt=""
+                            title=""
+                          />
+                        </a>
+                      </div>
+                      <div class="text">
+                        This prodigiously grew tortoise charact stupidly
+                        pernicious jeepers along while accordingly under useful
+                        much salacious walking fars before some supp
+                        aesthetically wow shuddered.
+                      </div>
+                      <ul class="social-icon-two">
+                        <li>
+                          <a href="#"><span class="fa fa-twitter"></span></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-facebook-square"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-google-plus"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-youtube-play"></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><span class="fa fa-pinterest-p"></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                    <div class="footer-widget links-widget">
+                      <h2>Web Links</h2>
+                      <ul class="links">
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="blog.html">Our News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--big column-->
+              <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-widget info-widget">
+                      <h2>Get In Touch</h2>
+                      <ul>
+                        <li>
+                          <span class="icon fa fa-map-marker"></span>32
+                          BellSouth, Harley Street <br />
+                          Florida 33968
+                        </li>
+                        <li>
+                          <span class="icon fa fa-phone"></span>
+                          <a href="tel:+12345678900">+(1) 234 567 8900 </a>
+                        </li>
+                        <li>
+                          <span class="icon fa fa-envelope"></span>
+                          <a href="mailto:support@PawFund.com">
+                            support@PawFund.com
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--Footer Column-->
+                  <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-widget subscribe-widget">
+                      <h2>Subsrribe to RSS</h2>
+                      <div class="text">
+                        One jeepers along while do accord under useful much
+                        darn.
+                      </div>
+                      <div class="subscribe-form">
+                        <form
+                          method="post"
+                          action="https://www.shmai.com/preview/PawFund-html/contact.html"
+                        >
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              name="email"
+                              value=""
+                              placeholder="Email"
+                              required=""
+                            />
+                          </div>
+                          <div class="form-group">
+                            <button
+                              type="submit"
+                              class="theme-btn btn-style-four"
+                            >
+                              subscribe now
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="copyright">
+              Copyrights 2021 <span>PawFund</span> • All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--End Main Footer-->
+    </div>
+    <!--End pagewrapper-->
+    <!--Scroll to top-->
+
+    <!-- pop up -->
+
+    <!-- Bootstrap Modal -->
+    <div
+      class="modal fade"
+      id="codeModal"
+      tabindex="-1"
+      aria-labelledby="codeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="codeModalLabel">
+              Enter Verification Code
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="codeForm">
+              <div class="mb-3">
+                <label for="verificationCode" class="form-label"
+                  >Verification Code</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="verificationCode"
+                  placeholder="Enter the code"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+    $(document).ready(function () {
+      // Handle Register button click
+      $('#registerBtn').on('click', function () {
+        // Get form values
+        const email = $('#email').val().trim();
+        const password = $('#password').val().trim();
+        const confirmPassword = $('#confirmPassword').val().trim();
+        const fullName = $('#fullName').val().trim();
+        const phoneNumber = $('#phoneNumber').val().trim();
+        const address = $('#address').val().trim();
+        const role = $('#role').val();
+  
+        // Validate fields
+        const validationError = validateForm(email, password, confirmPassword, fullName, phoneNumber, address);
+        if (validationError) {
+          $('#responseMessage').html(`<div class="alert alert-danger">${validationError}</div>`);
+          return;
+        }
+  
+        // Prepare request payload
+        const requestBody = {
+          email: email,
+          password: password,
+          fullName: fullName,
+          phoneNumber: phoneNumber,
+          address: address,
+          role: role,
+          isDeleted: true,
+        };
+  
+        // Send AJAX request to register API
+        $.ajax({
+          url: 'https://localhost:7063/api/Auth/Register',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(requestBody),
+          success: function (response) {
+            if (response.success) {
+              // Trigger modal to input verification code
+              const codeModal = new bootstrap.Modal(document.getElementById('codeModal'));
+              codeModal.show();
+            } else {
+              $('#responseMessage').html(
+                `<div class="alert alert-danger">${response.errorMessage || 'Registration failed.'}</div>`
+              );
+            }
+          },
+          error: function (error) {
+            console.error('Error:', error);
+            $('#responseMessage').html(`<div class="alert alert-danger">An error occurred. Please try again.</div>`);
+          },
+        });
+      });
+  
+      // Handle code submission
+    // Handle code submission
+$('#codeForm').on('submit', function (e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Close the modal without verifying the code
+  const codeModal = bootstrap.Modal.getInstance(document.getElementById('codeModal'));
+  codeModal.hide();
+
+  // Display a success message
+  Swal.fire({
+    icon: 'success',
+    title: 'Registration Successful',
+    text: 'Your account has been successfully registered!',
+  });
+    //  window.location.href = 'login.html';
+  // (Optional) Additional actions like redirecting or refreshing the page
+});
+
+      // Validate form fields
+      function validateForm(email, password, confirmPassword, fullName, phoneNumber, address) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\d{10,}$/;
+  
+        if (!email || !emailRegex.test(email)) {
+          return 'Please enter a valid email.';
+        }
+        if (!password || password.length < 8) {
+          return 'Password must be at least 8 characters long.';
+        }
+        if (password !== confirmPassword) {
+          return 'Passwords do not match.';
+        }
+        if (!fullName || !isNaN(fullName)) {
+          return 'Full name must be a valid string.';
+        }
+        if (!phoneNumber || !phoneRegex.test(phoneNumber)) {
+          return 'Phone number must be at least 10 digits and contain only numbers.';
+        }
+        if (!address) {
+          return 'Address is required.';
+        }
+        return null; // No validation errors
+      }
+    });
+  </script>
+   -->
+
+    <!-- <script>
+    $(document).ready(function () {
+      $('#registerBtn').on('click', function () {
+        // Get form values
+        const email = $('#email').val().trim();
+        const password = $('#password').val().trim();
+        const confirmPassword = $('#confirmPassword').val().trim();
+        const fullName = $('#fullName').val().trim();
+        const phoneNumber = $('#phoneNumber').val().trim();
+        const address = $('#address').val().trim();
+        const role = $('#role').val();
+  
+        // Validate fields
+        const validationError = validateForm(email, password, confirmPassword, fullName, phoneNumber, address);
+        if (validationError) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Validation Error',
+            text: validationError,
+          });
+          return;
+        }
+  
+        // Prepare request payload
+        const requestBody = {
+          email: email,
+          password: password,
+          fullName: fullName,
+          phoneNumber: phoneNumber,
+          address: address,
+          role: role,
+          status: true, // Status field added
+          isDeleted: false,
+        };
+  
+        // Display 20-second countdown using SweetAlert
+        let timerInterval;
+        Swal.fire({
+          title: 'Processing Registration',
+          html: 'Please wait for <b></b> seconds.',
+          timer: 20000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const b = Swal.getHtmlContainer().querySelector('b');
+            timerInterval = setInterval(() => {
+              b.textContent = Math.ceil(Swal.getTimerLeft() / 1000);
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          },
+        }).then(() => {
+          // Trigger after 20 seconds countdown
+          // Send AJAX request to register API
+          $.ajax({
+            url: 'https://localhost:7247/api/User/register',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(requestBody),
+            success: function (response) {
+              if (response.success) {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Registration Successful',
+                  text: 'Your account has been successfully registered!',
+                });
+              } else {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Registration Failed',
+                  text: response.errorMessage || 'An unexpected error occurred.',
+                });
+              }
+            },
+            error: function () {
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while registering. Please try again.',
+              });
+            },
+          });
+        });
+      });
+  
+      // Validate form fields
+      function validateForm(email, password, confirmPassword, fullName, phoneNumber, address) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\d{10,}$/;
+  
+        if (!email || !emailRegex.test(email)) {
+          return 'Please enter a valid email.';
+        }
+        if (!password || password.length < 8) {
+          return 'Password must be at least 8 characters long.';
+        }
+        if (password !== confirmPassword) {
+          return 'Passwords do not match.';
+        }
+        if (!fullName || !isNaN(fullName)) {
+          return 'Full name must be a valid string.';
+        }
+        if (!phoneNumber || !phoneRegex.test(phoneNumber)) {
+          return 'Phone number must be at least 10 digits.';
+        }
+        if (!address) {
+          return 'Address is required.';
+        }
+        return null; // No validation errors
+      }
+    });
+  </script>
+   -->
+
+    <!-- new register -->
+
+    <script>
+      $(document).ready(function () {
+        $("#registerBtn").click(function () {
+          // Get form values
+          const email = $("#email").val().trim();
+          const password = $("#password").val().trim();
+          const confirmPassword = $("#confirmPassword").val().trim();
+          const fullName = $("#fullName").val().trim();
+          const phoneNumber = $("#phoneNumber").val().trim();
+          const address = $("#address").val().trim();
+          const role = 2; // Default role for adopters
+
+          // Validation checks
+          if (!validateEmail(email)) {
+            Swal.fire("Error", "Please enter a valid email address!", "error");
+            return;
+          }
+
+          if (!validatePassword(password)) {
+            Swal.fire(
+              "Error",
+              "Password must contain at least 1 uppercase character, 1 special character, and both letters and numbers!",
+              "error"
+            );
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            Swal.fire("Error", "Passwords do not match!", "error");
+            return;
+          }
+
+          if (!/^\d{10,}$/.test(phoneNumber)) {
+            Swal.fire(
+              "Error",
+              "Phone number must contain at least 10 digits!",
+              "error"
+            );
+            return;
+          }
+
+          // Prepare request payload
+          const data = {
+            email,
+            password,
+            fullName,
+            phoneNumber,
+            address,
+            role,
+          };
+
+          // POST request to register endpoint
+          $.ajax({
+            url: "https://localhost:7247/api/User/register",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (response) {
+              Swal.fire("Success", "Please check your email!", "success");
+              // Wait 5 seconds for confirmation email
+              setTimeout(() => {
+                $("#codeModal").modal("show"); // Show verification modal
+              }, 5000);
+            },
+            error: function (error) {
+              Swal.fire(
+                "Error",
+                "Registration failed. Please try again!",
+                "error"
+              );
+            },
+          });
+        });
+
+        // Email validation
+        function validateEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        // Password validation
+        function validatePassword(password) {
+          const passwordRegex =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+          return passwordRegex.test(password);
+        }
+      });
+    </script>
+
+    <!-- Pop up check -->
+
+    <script>
+      $(document).ready(function () {
+        $("#codeForm").submit(function (e) {
+          e.preventDefault();
+
+          // Get verification details
+          const verificationCode = $("#verificationCode").val().trim();
+          const email = $("#email").val().trim(); // Use the email from the registration form
+
+          if (!verificationCode) {
+            Swal.fire("Error", "Please enter the verification code!", "error");
+            return;
+          }
+
+          // PUT request to verification endpoint
+          const data = {
+            email,
+            code: verificationCode,
+          };
+
+          $.ajax({
+            url: "https://localhost:7247/api/User/CheckUser",
+            type: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (response) {
+              Swal.fire("Success", "User is checked successfully!", "success");
+              // Redirect to login.html after 2 seconds
+              setTimeout(() => {
+                window.location.href = "login.html";
+              }, 7000);
+            },
+            error: function (error) {
+              Swal.fire(
+                "Error",
+                "Verification failed. Please try again!",
+                "error"
+              );
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="ThemesLay" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Inner page CSS -->
+    <link href="assets/css/inner.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Ionicons (Using ES Module for better performance) -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Page Title -->
+    <title>Dashboard</title>
+  </head>
+  <style>
+    .page-btn { margin: 5px; cursor: pointer; }
+    .page-btn.active { font-weight: bold; }
+</style>
+  <body>
+    
+    <!-- modal box for Logout Profile-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="p-5 text-center">
+            <h3 class="fs-2 fw-bold">
+              Are you sure?
+              <br />
+              you want to log out.
+            </h3>
+            <p class="font-medium">You have successfully logged out.</p>
+            <!-- Yes Confirm Button -->
+            <a
+              id="logoutConfirm"
+              data-bs-dismiss="modal"
+              class="btn btn-view min-h-auto"
+            >
+              <span class="fw-bold">Yes Confirm</span>
+            </a>
+            <!-- No Cancel Button -->
+            <a
+              data-bs-dismiss="modal"
+              class="btn border theme-border-radius effect ms-3"
+            >
+              No Cancel <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- page content area -->
+    <div class="pagewrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="breadcrumb-content"
+              style="display: flex; justify-content: space-around"
+            >
+              <h2>Admin Dashboard</h2>
+              <h4>
+                <a style="color: black" href="index.html"
+                  ><ion-icon size="large" name="home"></ion-icon
+                ></a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- body section -->
+      <div class="content-section">
+        <!-- dashboard section -->
+        <div class="py-5">
+          <div class="container">
+            <div class="row">
+              <!-- dashboard nav section -->
+              <div class="col-12 col-md-3">
+                <div
+                  class="d-flex flex-column theme-border-radius theme-bg-white theme-box-shadow"
+                >
+                  <div class="d-flex flex-column p-3">
+                    <span class="text-center mb-3 profile-pic">
+                      <img
+                        src="assets/images/icons/profile-icon.png"
+                        alt="Profile Pic"
+                        title="Profile Pic"
+                      />
+                      <a href="#" class="edit-btn"
+                        ><i class="bi bi-pencil p-3"></i
+                      ></a>
+                    </span>
+                    <span class="font-medium text-center">Bob Bill</span>
+                    <span class="font-small text-center">Personal Profile</span>
+                  </div>
+                  <ul id="dashboard">
+                    <li>
+                      <a
+                        href="dashboard.html"
+                        class="border-bottom p-3 theme-text-accent-one"
+                        ><i class="bi bi-speedometer fs-4 me-2 align-middle"></i
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="manage_shelter.html"
+                        class="border-bottom p-3 theme-text-accent-one"
+                        ><i class="bi bi-speedometer fs-4 me-2 align-middle"></i
+                        >Manage Shelter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="manage_donation.html"
+                        class="border-bottom p-3 theme-text-accent-one"
+                        ><i class="bi bi-card-list fs-4 me-2 align-middle"></i
+                        >Manage the Donation</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="manage_pet.html"
+                        class="border-bottom p-3 theme-text-accent-one"
+                        ><i class="bi bi-card-list fs-4 me-2 align-middle"></i
+                        >Manage the Pet</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="notification.html"
+                        class="border-bottom p-3 theme-text-accent-one"
+                        ><i class="bi bi-bell fs-4 me-2 align-middle"></i
+                        >Notification</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="border-bottom p-3 theme-text-accent-one logout-btn"
+                      >
+                        <i
+                          class="bi bi-box-arrow-right fs-4 me-2 align-middle"
+                        ></i
+                        >Logout
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- dashboard content section -->
+              <div class="col-12 col-md-9">
+                <div
+                  class="d-flex align-self-center justify-content-center align-items-center mb-5"
+                >
+                  <!-- <h3 class="display-6 mb-0">Welcome to <span class="high-text">Dashboard</span></h3> -->
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div
+                      class="theme-box-shadow theme-border-radius p-2 theme-bg-white"
+                    >
+                      <div class="row g-0">
+                        <div class="col-4 overflow-hidden theme-border-radius">
+                          <div class="overflow-hidden">
+                            <figure class="mb-0">
+                              <img
+                                src="assets/images/icons/dashboard-icon01.png"
+                                class="img-fluid"
+                                alt="dashboard icon 01"
+                                title="dashboard icon 01"
+                              />
+                            </figure>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div
+                            class="ps-md-0 ps-xxl-3 d-flex justify-content-between align-items-center h-100"
+                          >
+                            <div class="d-flex flex-column">
+                              <span class="d-flex fw-bold">Donate</span>
+                              <span class="fw-bold price theme-text-secondary">
+                                <i class="bi bi-currency-dollar"></i> #
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- dashboard features -->
+                  <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div
+                      class="theme-box-shadow theme-border-radius p-2 theme-bg-white"
+                    >
+                      <div class="row g-0">
+                        <div class="col-4 overflow-hidden theme-border-radius">
+                          <div class="overflow-hidden">
+                            <figure class="mb-0">
+                              <img
+                                src="assets/images/icons/user.png"
+                                class="img-fluid"
+                                alt="dashboard icon 01"
+                                title="dashboard icon 01"
+                              />
+                            </figure>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div
+                            class="ps-md-0 ps-xxl-3 d-flex justify-content-between align-items-center h-100"
+                          >
+                            <div class="d-flex flex-column">
+                              <span class="d-flex fw-bold">All User</span>
+                              <span class="fw-bold user theme-text-secondary">
+                                <i class="bi bi-currency-user"></i> #
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- dashboard features -->
+
+                  <!-- dashboard features -->
+                </div>
+                <!-- recent activity section -->
+                <div
+                  class="d-flex flex-column theme-border-radius theme-bg-white theme-box-shadow mb-4"
+                >
+                   
+                  <div class="d-flex justify-content-between p-3 wallet-head">
+                    <span class="text-uppercase fw-bold">Manage Account </span>
+                  </div>
+
+                  <div class="p-3">
+                    <div class="tble_wrap">
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th style="display: none;">ID</th>
+                              <th>Full Name</th>
+                              <th>Email</th>
+                              <th>Role</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody id="userTableBody"></tbody>
+                        </table>
+                      </div>
+                      <!-- Khu vực phân trang -->
+                      <nav>
+                        <ul class="pagination justify-content-center" id="pagination"></ul>
+                      </nav>
+                    </div>
+                  </div>
+                  
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     
+     
+
+    
+
+ 
+    <!-- -------------parseJWT getallUser phân quyền admin--------------------- -->
+    <!-- <script>
+      // Hàm parse JWT token
+      function parseJWT(token) {
+        try {
+          const base64Url = token.split(".")[1];
+          const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+          const jsonPayload = decodeURIComponent(
+            atob(base64)
+              .split("")
+              .map(function (c) {
+                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+              })
+              .join("")
+          );
+          return JSON.parse(jsonPayload);
+        } catch (e) {
+          console.error("Invalid token:", e);
+          return null;
+        }
+      }
+    
+      $(document).ready(function () {
+        const token = sessionStorage.getItem("token");
+    
+        if (!token) {
+          Swal.fire({
+            icon: "warning",
+            title: "Unauthorized",
+            text: "Authentication token not found. Please log in.",
+          }).then(() => {
+            window.location.href = "login.html";
+          });
+          return;
+        }
+    
+        const tokenData = parseJWT(token);
+    
+        if (!tokenData || tokenData.role !== "Admin") {
+          Swal.fire({
+            icon: "error",
+            title: "Access Denied",
+            text: "You do not have permission to access this resource.",
+          }).then(() => {
+            window.location.href = "login.html";
+          });
+          return;
+        }
+    
+        const apiUrl = "https://localhost:7063/api/users";
+    
+        // Lấy danh sách người dùng
+        $.ajax({
+          url: apiUrl,
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          success: function (response) {
+            if (response.success) {
+              const users = response.data;
+              const tableBody = $("#userTableBody");
+    
+              users.forEach((user) => {
+                const statusClass = user.status ? "text-success" : "text-danger";
+                const statusText = user.status ? "Active" : "Inactive";
+                const actionText = user.status ? "Disable" : "Enable";
+    
+                const row = `
+                  <tr>
+                    <td style="display: none;">${user.userId}</td>
+                    <td>${user.fullName}</td>
+                    <td>${user.email}</td>
+                    <td>${user.role}</td>
+                    <td><span class="${statusClass}">${statusText}</span></td>
+                    <td>
+                      <a href="#" class="toggle-status-btn" data-user-id="${user.userId}" style="color: red;">${actionText}</a>
+                    </td>
+                  </tr>
+                `;
+                tableBody.append(row);
+              });
+    
+              // Gắn sự kiện click cho các nút Toggle Status
+              $(".toggle-status-btn").on("click", function (e) {
+                e.preventDefault();
+                const userId = $(this).data("user-id");
+    
+                // Tìm người dùng được chọn
+                const selectedUser = users.find((u) => u.userId === userId);
+                if (selectedUser) {
+                  const newStatus = !selectedUser.status;
+    
+                  // Gọi API để cập nhật trạng thái
+                  $.ajax({
+                    url: `${apiUrl}/UpdateStatus`,
+                    method: "POST",
+                    headers: {
+                      Authorization: `Bearer ${token}`,
+                      "Content-Type": "application/json",
+                    },
+                    data: JSON.stringify({
+                      userId: selectedUser.userId,
+                      status: newStatus,
+                    }),
+                    success: function (updateResponse) {
+                      if (updateResponse.success) {
+                        // Cập nhật giao diện
+                        selectedUser.status = newStatus;
+                        const updatedRow = `
+                          <tr>
+                            <td style="display: none;">${selectedUser.userId}</td>
+                            <td>${selectedUser.fullName}</td>
+                            <td>${selectedUser.email}</td>
+                            <td>${selectedUser.role}</td>
+                            <td><span class="${newStatus ? "text-success" : "text-danger"}">${newStatus ? "Active" : "Inactive"}</span></td>
+                            <td>
+                              <a href="#" class="toggle-status-btn" data-user-id="${selectedUser.userId}" style="color: blue;">${newStatus ? "Disable" : "Enable"}</a>
+                            </td>
+                          </tr>
+                        `;
+                        $(this).closest("tr").replaceWith(updatedRow);
+                      } else {
+                        Swal.fire({
+                          icon: "error",
+                          title: "Error",
+                          text: "Failed to update user status.",
+                        });
+                      }
+                    },
+                    error: function (xhr, status, error) {
+                      console.error("Error updating status:", error);
+                      Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "Failed to update user status.",
+                      });
+                    },
+                  });
+                }
+              });
+            } else {
+              alert("Failed to fetch data: " + response.errorMessage);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching users:", error);
+          },
+        });
+      });
+    </script> -->
+    
+
+    <!-- ---------------------------ParseJWT---------------- -->
+    <script>
+      function parseJWT(token) {
+        try {
+          const base64Url = token.split(".")[1];
+          const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+          const jsonPayload = decodeURIComponent(
+            atob(base64)
+              .split("")
+              .map(function (c) {
+                return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+              })
+              .join("")
+          );
+          return JSON.parse(jsonPayload);
+        } catch (e) {
+          console.error("Invalid token:", e);
+          return null;
+        }
+      }
+    </script>
+    
+
+    <!-- ----Kiểm tra quyền Admin---- -->
+    <script>
+      $(document).ready(function () {
+        const token = sessionStorage.getItem("token");
+    
+        if (!token) {
+          Swal.fire({
+            icon: "warning",
+            title: "Unauthorized",
+            text: "Authentication token not found. Please log in.",
+          }).then(() => {
+            window.location.href = "login.html";
+          });
+          return;
+        }
+    
+        const tokenData = parseJWT(token);
+    
+        if (!tokenData || tokenData.role !== "Admin") {
+          Swal.fire({
+            icon: "error",
+            title: "Access Denied",
+            text: "You do not have permission to access this resource.",
+          }).then(() => {
+            window.location.href = "login.html";
+          });
+          return;
+        }
+      });
+    </script>
+    
+    <!-- Lấy danh sách người dùng với phân trang -->
+    <script>
+      const itemsPerPage = 3; // Số lượng người dùng trên mỗi trang
+let currentPage = 1;
+let totalPages = 1;
+let users = []; // Dữ liệu người dùng sẽ được lưu tại đây
+
+function renderTable(page) {
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedUsers = users.slice(start, end);
+  const tableBody = $("#userTableBody");
+  tableBody.empty();
+
+  paginatedUsers.forEach((user) => {
+    const statusClass = user.status ? "text-success" : "text-danger";
+    const statusText = user.status ? "Active" : "Inactive";
+    const actionText = user.status ? "Disable" : "Enable";
+
+    const row = `
+      <tr>
+        <td style="display: none;">${user.userId}</td>
+        <td>${user.fullName}</td>
+        <td>${user.email}</td>
+        <td>${user.role}</td>
+        <td><span class="${statusClass}">${statusText}</span></td>
+        <td>
+          <a href="#" class="toggle-status-btn" data-user-id="${user.userId}" style="color: red;">${actionText}</a>
+        </td>
+      </tr>
+    `;
+    tableBody.append(row);
+  });
+
+  updatePagination(page);
+}
+
+function updatePagination(page) {
+  const pagination = $("#pagination");
+  pagination.empty();
+
+  // Nút trang trước
+  const prevDisabled = page === 1 ? "disabled" : "";
+  pagination.append(`
+    <li class="page-item ${prevDisabled}">
+      <a class="page-link" href="#" data-page="${page - 1}">
+        <i class="bi bi-arrow-left">◀</i>
+      </a>
+    </li>
+  `);
+
+  // Các nút số trang
+  for (let i = 1; i <= totalPages; i++) {
+    const active = i === page ? "active" : "";
+    pagination.append(`
+      <li class="page-item ${active}">
+        <a class="page-link" href="#" data-page="${i}">${i}</a>
+      </li>
+    `);
+  }
+
+  // Nút trang sau
+  const nextDisabled = page === totalPages ? "disabled" : "";
+  pagination.append(`
+    <li class="page-item ${nextDisabled}">
+      <a class="page-link" href="#" data-page="${page + 1}">
+        <i class="bi bi-arrow-right">▶</i>
+      </a>
+    </li>
+  `);
+
+  // Thêm sự kiện click cho nút phân trang
+  $(".page-link").on("click", function (e) {
+    e.preventDefault();
+    const newPage = parseInt($(this).data("page"));
+    if (!isNaN(newPage)) {
+      currentPage = newPage;
+      renderTable(currentPage);
+    }
+  });
+}
+
+// Khởi tạo dữ liệu sau khi fetch từ API
+function initializeTable(responseData) {
+  users = responseData;
+  totalPages = Math.ceil(users.length / itemsPerPage);
+  renderTable(currentPage);
+}
+
+// Fetch danh sách người dùng từ API
+function fetchUsers() {
+  const token = sessionStorage.getItem("token");
+  const apiUrl = "https://localhost:7063/api/users";
+
+  $.ajax({
+    url: apiUrl,
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    success: function (response) {
+      if (response.success) {
+        initializeTable(response.data);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: response.errorMessage || "Failed to fetch users.",
+        });
+      }
+    },
+    error: function (xhr, status, error) {
+      console.error("Error fetching users:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Failed to fetch users.",
+      });
+    },
+  });
+}
+
+// Khi tài liệu đã sẵn sàng
+$(document).ready(function () {
+  fetchUsers();
+});
+
+    </script>
+    <!-- Cập nhật trạng thái Enable/Disable -->
+
+    <script>
+      $(document).on("click", ".toggle-status-btn", function (e) {
+        e.preventDefault();
+        const userId = $(this).data("user-id");
+        const apiUrl = "https://localhost:7063/api/users";
+        const token = sessionStorage.getItem("token");
+    
+        $.ajax({
+          url: `${apiUrl}/UpdateStatus`,
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify({
+            userId: userId,
+            status: $(this).text().trim() === "Enable",
+          }),
+          success: function (response) {
+            if (response.success) {
+              Swal.fire({
+                icon: "success",
+                title: "Success",
+                text: "User status updated successfully.",
+              }).then(() => {
+                // Refresh current page
+                const currentPage = parseInt($(".page-item.active .page-link").text());
+                fetchUsers(currentPage);
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Failed to update user status.",
+              });
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Error updating status:", error);
+            Swal.fire({
+              icon: "error",
+              title: "Error",
+              text: "Failed to update user status.",
+            });
+          },
+        });
+      });
+    </script>
+    
+
+
+
+    <!-- LOG OUT -->
+
+    <script>
+      // Attach an event listener to the "Yes Confirm" button
+      $(document).ready(function () {
+        // Handle logout button click
+        $(".logout-btn").on("click", function (event) {
+          event.preventDefault();
+
+          // Clear session storage
+          sessionStorage.removeItem("token");
+          sessionStorage.removeItem("userId");
+          sessionStorage.removeItem("role");
+
+          // Optionally clear cookies or localStorage if used
+          localStorage.clear(); // Uncomment if localStorage is also used
+
+          // Notify the user and redirect to the login page
+          Swal.fire({
+            icon: "success",
+            title: "Logged Out",
+            text: "You have successfully logged out!",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(() => {
+            window.location.href = "login.html"; // Redirect to login page
+          });
+        });
+      });
+    </script>
+
+    <!-- SUM DONATION -->
+    <script>
+      $(document).ready(function () {
+        // API Endpoint
+        const apiUrl = "https://localhost:7063/api/Donation";
+
+        // Function to calculate the total donation
+        function fetchAndCalculateDonations() {
+          $.ajax({
+            url: apiUrl,
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+              let totalDonation = 0;
+
+              // Calculate the sum of donation amounts
+              data.forEach((donation) => {
+                totalDonation += donation.amount;
+              });
+
+              // Update the total in the HTML
+              $(".price").html(
+                `<i class="bi bi-currency-dollar"></i> ${totalDonation.toLocaleString()}`
+              );
+            },
+            error: function (error) {
+              console.error("Error fetching donation data:", error);
+            },
+          });
+        }
+
+        // Call the function on page load
+        fetchAndCalculateDonations();
+      });
+    </script>
+
+    <!-- SUM of USER -->
+
+    <script>
+      $(document).ready(function () {
+        // API Endpoint
+        const apiUrl = "https://localhost:7063/api/users";
+
+        // Function to fetch and count users
+        function fetchAndCountUsers() {
+          $.ajax({
+            url: apiUrl,
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              // Get the number of users from the response
+              const totalUsers = response.data.length;
+
+              // Update the total in the HTML
+              $(".user").html(
+                `<i class="bi bi-currency-user"></i> ${totalUsers}`
+              );
+            },
+            error: function (error) {
+              console.error("Error fetching user data:", error);
+            },
+          });
+        }
+
+        // Call the function on page load
+        fetchAndCountUsers();
+      });
+    </script>
+
+   </body>
+</html>
